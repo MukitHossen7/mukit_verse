@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  /* --- Fonts (layout.tsx থেকে আসবে) --- */
+  --font-orbitron: var(--font-orbitron);
+  --font-rajdhani: var(--font-rajdhani);
+
+  /* --- Colors (আপনার Figma ডিজাইন অনুযায়ী) --- */
+  --color-background: #050a18; /* Deep Dark Navy */
+  --color-primary: #3b82f6; /* Electric Blue */
+  --color-accent: #06b6d4; /* Cyan glow */
+  --color-secondary: #1e293b; /* Card BG */
+  --color-text-light: #e2e8f0;
+
+  /* --- Gradients --- */
+  --image-hero-gradient: radial-gradient(
+    circle at center,
+    #172554 0%,
+    #050a18 70%
+  );
+  --image-btn-gradient: linear-gradient(90deg, #2563eb 0%, #06b6d4 100%);
+
+  /* --- Animations (Custom) --- */
+  --animate-spin-slow: spin 10s linear infinite;
+}
+
+/* --- Base Styles --- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Default Theme Variables */
+  --background: #050a18;
+  --foreground: #e2e8f0;
+
+  /* Font Variables fallback */
+  --font-orbitron: sans-serif;
+  --font-rajdhani: sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Reset and Base Setup */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-rajdhani), sans-serif; /* বডি টেক্সট এর জন্য Rajdhani */
+  overflow-x: hidden; /* হরিজন্টাল স্ক্রল বন্ধ করার জন্য */
+}
+
+/* Headings এর জন্য Orbitron ফন্ট সেট করা */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-orbitron), sans-serif;
+}
+
+/* Utilities (Optional Custom Classes) */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
 }
