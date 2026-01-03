@@ -3,7 +3,7 @@ import { FaLinkedin, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-10 border-t border-white/10 relative overflow-hidden">
+    <footer className="bg-[#121212] py-10 border-t border-white/10 relative overflow-hidden">
       {/* Blue Glow at bottom */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-blue-900/20 blur-[100px] pointer-events-none"></div>
 

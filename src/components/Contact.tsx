@@ -1,7 +1,7 @@
 // components/Contact.tsx
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-[#050A18] relative">
+    <section id="contact" className="py-20 bg-[#121212] relative">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.png')] opacity-5 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4">

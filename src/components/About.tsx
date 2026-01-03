@@ -9,7 +9,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-[#050A18] relative overflow-hidden">
+    <section id="about" className="py-20 bg-[#121212] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <h2
           className="text-center font-orbitron text-4xl md:text-5xl font-bold mb-16 text-white"

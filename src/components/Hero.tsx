@@ -1,9 +1,121 @@
+// "use client";
+// import { useEffect, useRef } from "react";
+// import gsap from "gsap";
+// import Image from "next/image";
+// import Link from "next/link";
+
+// import bannerImage from "../images/Subtract.png";
+// import lightningLine from "../images/bannerImage2.png";
+
+// export default function Hero() {
+//   const textRef = useRef(null);
+//   const imageRef = useRef(null);
+
+//   useEffect(() => {
+//     gsap.fromTo(
+//       textRef.current,
+//       { opacity: 0, y: 50 },
+//       { opacity: 1, y: 0, duration: 1.5, ease: "power3.out" }
+//     );
+//     gsap.fromTo(
+//       imageRef.current,
+//       { opacity: 0, scale: 0.8 },
+//       { opacity: 1, scale: 1, duration: 1.2, delay: 0.5, ease: "back.out(1.7)" }
+//     );
+//   }, []);
+
+//   return (
+//     <section
+//       id="home"
+//       className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden py-24"
+//       style={{
+//         background: `
+//           radial-gradient(ellipse 120% 80% at 50% 50%, rgba(31, 52, 86, 0.6) 0%, transparent 80%),
+//           linear-gradient(to bottom, transparent 0%, #121212 70%),
+//           linear-gradient(to right, #121212 0%, #141518 10%, #1C263B 50%, #141518 90%, #121212 100%)
+//         `,
+//         backgroundColor: "#121212",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 z-10 w-full relative">
+//         <div className="text-center flex flex-col items-center">
+//           <h1
+//             ref={textRef}
+//             className="font-orbitron text-5xl md:text-[90px] lg:text-[120px] font-extrabold text-white mb-4 uppercase tracking-tighter leading-tight"
+//           >
+//             Next.js Hero
+//           </h1>
+
+//           <div className="relative w-full max-w-[450px] md:max-w-[550px] lg:max-w-[650px] mb-6">
+//             <Image
+//               ref={imageRef}
+//               src={bannerImage}
+//               alt="Fist Lightning"
+//               width={650}
+//               height={300}
+//               priority
+//               className="object-contain -rotate-10"
+//             />
+//           </div>
+
+//           <p className="text-[#B9B9B9] font-rajdhani max-w-2xl mx-auto text-lg md:text-[20px] mb-12 leading-relaxed">
+//             I&apos;m a Next.js Developer crafting high-performance, modern web
+//             apps with clean UI & better UX.
+//           </p>
+
+//           <div className="flex flex-wrap gap-8 justify-center mb-16">
+//             <Link href="#projects">
+//               <div className="p-[1px] bg-gradient-to-r from-[#3B82F6] to-[#FFFFFF] rounded-sm transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+//                 <button className="px-10 py-3 bg-gradient-to-r from-[#121212] to-[#1F3456] text-white font-orbitron font-medium text-[16px] uppercase tracking-wider">
+//                   View My Work
+//                 </button>
+//               </div>
+//             </Link>
+
+//             <Link href="#contact">
+//               <div className="p-[1px] bg-gradient-to-r from-[#3B82F6] to-[#FFFFFF] rounded-sm transition-transform hover:scale-105 active:scale-95">
+//                 <button className="px-10 py-3 bg-[#1F3456] text-white font-orbitron font-medium text-[16px] uppercase tracking-wider">
+//                   Let&apos;s Connect
+//                 </button>
+//               </div>
+//             </Link>
+//           </div>
+
+//           <div className="w-full max-w-[350px] opacity-80">
+//             <Image
+//               src={lightningLine}
+//               alt="decorative line"
+//               width={350}
+//               height={40}
+//               className="object-contain mx-auto"
+//             />
+//           </div>
+//         </div>
+//       </div>
+
+//       <div
+//         className="absolute inset-0 bg-radial-glow opacity-50 pointer-events-none"
+//         style={{
+//           background:
+//             "radial-gradient(circle at center, rgba(31, 52, 86, 0.2) 0%, transparent 70%)",
+//         }}
+//       />
+//     </section>
+//   );
+// }
+
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
+import Link from "next/link";
+
+import bannerImage from "../images/Subtract.png";
+import lightningLine from "../images/bannerImage2.png";
 
 export default function Hero() {
   const textRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -11,63 +123,82 @@ export default function Hero() {
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1.5, ease: "power3.out" }
     );
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, duration: 1.2, delay: 0.5, ease: "back.out(1.7)" }
+    );
   }, []);
 
   return (
     <section
       id="home"
-      className="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-hero-gradient pt-20"
+      className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-10" // Navbar-এর জন্য সামান্য স্পেস
+      style={{
+        background: `
+          /* লেয়ার ১: সেন্ট্রাল ব্লু রেডিয়াল গ্লো */
+          radial-gradient(ellipse 100% 70% at 50% 50%, rgba(31, 52, 86, 0.6) 0%, transparent 80%),
+          /* লেয়ার ২: ভার্টিক্যাল ট্রানজিশন - যা ওপরের কালারকে নিচে #121212 এ মিলিয়ে দিবে */
+          linear-gradient(to bottom, transparent 0%, #121212 90%),
+          /* লেয়ার ৩: হুবহু আপনার Navbar এর গ্রেডিয়েন্ট কালার (যাতে গ্যাপ না থাকে) */
+          linear-gradient(to right, #121212 0%, #141518 10%, #1C263B 50%, #141518 90%, #121212 100%)
+        `,
+        backgroundColor: "#121212",
+      }}
     >
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[100px]" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 z-10 w-full relative">
+        <div className="text-center flex flex-col items-center">
+          <h1
+            ref={textRef}
+            className="font-orbitron text-5xl md:text-[90px] lg:text-[120px] font-extrabold text-white mb-4 uppercase tracking-tighter leading-tight"
+          >
+            Next.js Hero
+          </h1>
 
-      <div className="z-10 text-center px-4">
-        <h2 className="font-orbitron text-xl md:text-2xl text-white mb-2 tracking-[0.2em] text-gray-400">
-          WELCOME TO MUKITVERSE
-        </h2>
+          <div className="relative w-full max-w-[450px] md:max-w-[550px] lg:max-w-[650px] mb-6">
+            <Image
+              ref={imageRef}
+              src={bannerImage}
+              alt="Fist"
+              width={650}
+              height={300}
+              priority
+              className="object-contain"
+            />
+          </div>
 
-        <h1
-          ref={textRef}
-          className="font-orbitron text-5xl md:text-8xl font-bold text-white mb-6 uppercase drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
-        >
-          Next.js{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-            Hero
-          </span>
-        </h1>
+          <p className="text-[#B9B9B9] font-rajdhani max-w-2xl mx-auto text-lg md:text-[20px] mb-12 leading-relaxed">
+            I&apos;m a Next.js Developer crafting high-performance, modern web
+            apps with clean UI & better UX.
+          </p>
 
-        {/* Fist Image (Placeholder approach - replace with your asset) */}
-        <div className="relative w-full max-w-lg mx-auto h-40 md:h-64 my-4 animate-pulse">
-          {/* You should put the fist/lightning image here */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            {/* <Image src="/path-to-fist-lightning.png" alt="Power" fill className="object-contain"/> */}
-            <div className="text-cyan-400 text-6xl">⚡👊⚡</div>
+          <div className="flex flex-wrap gap-8 justify-center mb-16">
+            <Link href="#projects">
+              <div className="p-[1px] bg-gradient-to-r from-[#3B82F6] to-[#FFFFFF] rounded-sm transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                <button className="px-10 py-3 bg-gradient-to-r from-[#121212] to-[#1F3456] text-white font-orbitron font-medium text-[16px] uppercase tracking-wider">
+                  View My Work
+                </button>
+              </div>
+            </Link>
+            <Link href="#contact">
+              <div className="p-[1px] bg-gradient-to-r from-[#3B82F6] to-[#FFFFFF] rounded-sm transition-transform hover:scale-105 active:scale-95">
+                <button className="px-10 py-3 bg-[#1F3456] text-white font-orbitron font-medium text-[16px] uppercase tracking-wider">
+                  Let&apos;s Connect
+                </button>
+              </div>
+            </Link>
+          </div>
+
+          <div className="w-full max-w-[350px] opacity-80">
+            <Image
+              src={lightningLine}
+              alt="line"
+              width={350}
+              height={40}
+              className="object-contain mx-auto"
+            />
           </div>
         </div>
-
-        <p
-          className="font-rajdhani text-gray-300 max-w-2xl mx-auto text-lg md:text-xl mb-10"
-          data-aos="fade-up"
-        >
-          I&apos;m a Next.js Developer crafting high-performance, modern web
-          apps with clean UI & better UX.
-        </p>
-
-        <div
-          className="flex gap-6 justify-center"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-500 rounded text-white font-orbitron tracking-wide hover:scale-105 transition-transform border border-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.5)]">
-            View My Work
-          </button>
-          <button className="px-8 py-3 bg-transparent border border-white/30 rounded text-white font-orbitron tracking-wide hover:bg-white/10 transition-colors">
-            Let&apos;s Connect
-          </button>
-        </div>
-
-        {/* Bottom Lightning Effect */}
-        <div className="absolute bottom-10 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent blur-sm"></div>
       </div>
     </section>
   );

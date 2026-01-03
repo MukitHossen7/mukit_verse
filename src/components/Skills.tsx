@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <section className="py-20 bg-[#050A18] relative">
+    <section className="py-20 bg-[#121212] relative">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2
           className="font-orbitron text-4xl md:text-5xl font-bold mb-4"

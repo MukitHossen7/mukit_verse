@@ -9,7 +9,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050A18] text-white">
+    <main className="min-h-screen bg-[#121212] text-[#FFFFFF]">
       <Navbar />
       <Hero />
       <About />
