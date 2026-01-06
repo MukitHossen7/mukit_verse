@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import goth from "../images/aboutme.png";
 import current from "../images/aboutme2.png";
