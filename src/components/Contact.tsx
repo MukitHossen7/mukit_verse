@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#0A0A0A] relative overflow-hidden flex items-center min-h-screen py-20"
+      className="bg-[#121212] relative overflow-hidden flex items-center min-h-screen py-20"
     >
       <div className="absolute top-[0%] left-0 w-full flex justify-center select-none pointer-events-none z-0">
         <Image
@@ -69,13 +69,13 @@ export default function Contact() {
 
           {/* Right Side: Contact Form (Glass Effect) */}
           <div
-            className="bg-white/5 backdrop-blur-md p-7  rounded-[16px] "
+            className="bg-[#121212] backdrop-blur-md p-7  rounded-[16px] "
             data-aos="fade-left"
           >
             <form className="space-y-8">
               {/* Name Input */}
               <div className="relative group">
-                <label className="absolute -top-3.5 left-5 bg-[#0D0D0D] px-2 font-orbitron text-[15px] text-[#FFFFFF] tracking-widest uppercase z-10 transition-colors group-focus-within:text-[#FFFFFF]">
+                <label className="absolute -top-3.5 left-5 bg-[#121212] px-2 font-orbitron text-[15px] text-[#FFFFFF] tracking-widest uppercase z-10 transition-colors group-focus-within:text-[#FFFFFF]">
                   Name
                 </label>
                 <input
@@ -87,7 +87,7 @@ export default function Contact() {
 
               {/* Email Input */}
               <div className="relative group">
-                <label className="absolute -top-3.5 left-5 bg-[#0D0D0D] px-2 font-orbitron text-[15px] text-[#FFFFFF] tracking-widest uppercase z-10 transition-colors group-focus-within:text-[#FFFFFF]">
+                <label className="absolute -top-3.5 left-5 bg-[#121212] px-2 font-orbitron text-[15px] text-[#FFFFFF] tracking-widest uppercase z-10 transition-colors group-focus-within:text-[#FFFFFF]">
                   Email
                 </label>
                 <input
@@ -99,7 +99,7 @@ export default function Contact() {
 
               {/* Message Input */}
               <div className="relative group">
-                <label className="absolute -top-3.5 left-5 bg-[#0D0D0D] px-2 font-orbitron text-[15px] text-[#FFFFFF] tracking-widest uppercase z-10 transition-colors group-focus-within:text-[#FFFFFF]">
+                <label className="absolute -top-3.5 left-5 bg-[#121212] px-2 font-orbitron text-[15px] text-[#FFFFFF] tracking-widest uppercase z-10 transition-colors group-focus-within:text-[#FFFFFF]">
                   Message
                 </label>
                 <textarea
@@ -112,7 +112,7 @@ export default function Contact() {
               <div className="relative p-[1px] rounded-[8px] overflow-hidden bg-gradient-to-r from-[#3B82F6] to-[#FFFFFF]">
                 <button
                   type="submit"
-                  className="w-full py-5 rounded-[8px] text-[#FFFFFF] font-orbitron tracking-[5px] font-medium text-[16px] transition-all uppercase relative z-10"
+                  className="w-full py-5 rounded-[8px] text-[#FFFFFF] font-orbitron tracking-[5px] font-medium text-[16px] transition-all uppercase relative z-10 cursor-pointer"
                   style={{
                     background: `linear-gradient(90deg, #121212 0%, #3B82F6 100%)`,
                   }}

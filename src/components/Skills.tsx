@@ -6,7 +6,10 @@ import SkillsComponent from "./SkillsComponent";
 
 export default function Skills() {
   return (
-    <section className="py-20 bg-[#121212] relative w-full min-h-screen overflow-hidden">
+    <section
+      id="skills"
+      className="py-20 bg-[#121212] relative w-full min-h-screen overflow-hidden"
+    >
       <div
         className="absolute top-0 left-0 w-[30%] h-full pointer-events-none z-0"
         style={{
