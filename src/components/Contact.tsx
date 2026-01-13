@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left Side: Info */}
           <div data-aos="fade-right" className="relative">
-            <h3 className="font-orbitron text-3xl md:text-[40px] font-bold mb-3 mt-6 text-[#FFFFFF] leading-tight tracking-tight">
+            <h3 className="font-orbitron text-3xl md:text-[40px] font-bold mb-3 mt-20 text-[#FFFFFF] leading-tight tracking-tight">
               GET IN TOUCH
             </h3>
             <p className="font-rajdhani text-[#B9B9B9] mb-4 text-[20px] italic max-w-md leading-relaxed">
